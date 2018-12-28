@@ -15,9 +15,8 @@
                 <g:if test="${session.usuario instanceof hotel.Cliente}">
                     <h3 class="menu-title">Area do Cliente</h3><!-- /.menu-title -->
                     <li class="active">
-                        <g:link controller="Menu" action="checkOut" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                           aria-expanded="false"><i class="menu-icon fa fa-bar-chart"></i>Check-out</g:link>
-                    </li>
+                    <g:link controller="Quarto" action="saindo"><i class="menu-icon fa fa-th"></i>Check-Out</g:link>
+                </li>
                 </g:if>
 
                 <g:if test="${session.usuario instanceof hotel.Gerente}">

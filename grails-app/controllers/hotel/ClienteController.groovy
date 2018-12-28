@@ -29,6 +29,7 @@ class ClienteController {
         def a = request.getFile("arquivo")
         def nomeOriginal = params.arquivo.originalFilename
         def tamanho = nomeOriginal.length()
+        def x = url
         def extensao = nomeOriginal.substring(tamanho - 3, tamanho)
         a.transferTo(new File("C:/Users/User/Documents/Project/caribean-hotel/grails-app/assets/images/Usuarios/${params.email}.${extensao}"))
         def cliente = new Cliente(params)
@@ -38,8 +39,8 @@ class ClienteController {
 
         render view: "/pagina-usuario"
     }
-    def avaliacoes(Long estrelas) {
-        def avaliacoes = Avaliacao.findAllByEstrelas(estrelas)
+    def avaliacoes(Long id) {
+        def avaliacoes = Avaliacao.findAllByEstrelas(id)
         respond avaliacoes,view: "/avaliacao"
     }
     def deletar(Long id){

@@ -11,24 +11,19 @@
 
             <ul class="nav nav-tabs" role="tablist" id="bts_estrelas">
                 <li class="nav-item">
-                    <g:link class="nav-link active" id="dia1" href="#day-1" role="tab" data-toggle="tab"
-                            controller="Cliente" action="avaliacoes" estrelas="${1}">●</g:link>
+                    <a class="nav-link active" id="dia1" href="#day-1" role="tab" data-toggle="tab" >●</a>
                 </li>
                 <li class="nav-item">
-                    <g:link class="nav-link" id="dia2" href="#day-2" role="tab" data-toggle="tab" controller="Cliente"
-                            action="avaliacoes" estrelas="${2}">●●</g:link>
+                    <a class="nav-link" id="dia2" href="#day-2" role="tab" data-toggle="tab">●●</a>
                 </li>
                 <li class="nav-item">
-                    <g:link class="nav-link" id="dia3" href="#day-3" role="tab" data-toggle="tab" controller="Cliente"
-                            action="avaliacoes" estrelas="${3}">●●●</g:link>
+                    <a class="nav-link" id="dia3" href="#day-3" role="tab" data-toggle="tab">●●●</a>
                 </li>
                 <li class="nav-item">
-                    <g:link class="nav-link" id="dia4" href="#day-4" role="tab" data-toggle="tab" controller="Cliente"
-                            action="avaliacoes" estrelas="${4}">●●●●</g:link>
+                    <a class="nav-link" id="dia4" href="#day-4" role="tab" data-toggle="tab">●●●●</a>
                 </li>
                 <li class="nav-item">
-                    <g:link class="nav-link" id="dia5" href="#day-4" role="tab" data-toggle="tab" controller="Cliente"
-                            action="avaliacoes" estrelas="${5}">●●●●●</g:link>
+                    <a class="nav-link" id="dia5" href="#day-5" role="tab" data-toggle="tab">●●●●●</a>
                 </li>
 
             </ul>
@@ -39,7 +34,7 @@
 
                 <!-- Schdule Day 1 -->
                 <div role="tabpanel" class="col-lg-9 tab-pane fade active show in" id="day-1">
-                    <g:each in="${avaliacoesList}" var="avaliacao">
+                    <g:each in="${Avalicao.findAllByEstrelas(1)}" var="avaliacao">
                         <div class="row schedule-item">
                             <div class="col-md-2"><time>${avaliacao.data}</time></div>
 
@@ -59,7 +54,7 @@
                 <!-- Schdule Day 2 -->
                 <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-2">
 
-                    <g:each in="${avaliacoesList}" var="avaliacao">
+                    <g:each in="${Avalicao.findAllByEstrelas(2)}" var="avaliacao">
                         <div class="row schedule-item">
                             <div class="col-md-2"><time>${avaliacao.data}</time></div>
 
@@ -80,7 +75,7 @@
                 <!-- Schdule Day 3 -->
                 <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-3">
 
-                    <g:each in="${avaliacoesList}" var="avaliacao">
+                    <g:each in="${Avalicao.findAllByEstrelas(3)}" var="avaliacao">
                         <div class="row schedule-item">
                             <div class="col-md-2"><time>${avaliacao.data}</time></div>
 
@@ -99,7 +94,7 @@
                 <!-- Schdule Day 4 -->
                 <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-4">
 
-                    <g:each in="${avaliacoesList}" var="avaliacao">
+                    <g:each in="${Avalicao.findAllByEstrelas(4)}" var="avaliacao">
                         <div class="row schedule-item">
                             <div class="col-md-2"><time>${avaliacao.data}</time></div>
 
@@ -118,7 +113,7 @@
                 <!-- Schdule Day 5 -->
                 <div role="tabpanel" class="col-lg-9 tab-pane fade" id="day-5">
 
-                    <g:each in="${avaliacoesList}" var="avaliacao">
+                    <g:each in="${Avalicao.findAllByEstrelas(5)}" var="avaliacao">
                         <div class="row schedule-item">
                             <div class="col-md-2"><time>${avaliacao.data}</time></div>
 

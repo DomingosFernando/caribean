@@ -6,6 +6,7 @@ class FuncionarioController {
 
     def cadastrar() {
         def funcionario = new Funcionario(params)
+        funcionario.servico = Servicos.find("from Servicos s where s.tipo=:tipo",[tipo:'Ajeitar cama'])
         //Adicionando foto
         def a = request.getFile("arquivo")
         def nomeOriginal = params.arquivo.originalFilename
@@ -20,6 +21,7 @@ class FuncionarioController {
 
     def criar(){
         def funcionario = new Funcionario(params)
+        funcionario.servico = Servicos.find("from Servicos s where s.tipo=:tipo",[tipo:'Ajeitar cama'])
         //Adicionando foto
         def a = request.getFile("arquivo")
         def nomeOriginal = params.arquivo.originalFilename

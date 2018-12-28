@@ -68,13 +68,6 @@
                     </div>
 
                     <div class="form-group">
-                        <label>Serviço</label>
-                        <g:textField name="servico" class="form-control" placeholder="Servico"/>
-                    </div>
-
-                
-
-                    <div class="form-group">
                         <label>Estado</label>
                         <g:textField name="estado" class="form-control" placeholder="Estado"/>
                     </div>

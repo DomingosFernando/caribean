@@ -5,7 +5,7 @@ class Avaliacao {
     String comentario
     String titulo
     String data
-    static belongsTo = [cliente:Cliente,hotel:Hotel]
+    static belongsTo = [cliente:Cliente]
     static constraints = {
         estrelas(min:1,max:5,blank:false,nullable:false)
         comentario(blank:false,nullable:false,maxSize:200)
