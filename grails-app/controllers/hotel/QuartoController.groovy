@@ -70,13 +70,13 @@ class QuartoController {
         quarto.save(flush: true, failOnError: true)
         render view: "/Atualizar/atualizar-quarto"
 
-
     }
     def reservar(Long id){
         def quarto = Quarto.get(id)
-
         quarto.cliente = session.usuario
         quarto.save(flush: true, failOnError: true)
+        Integer conta = quarto.get(params.valor)
+        session.usuario.conta = conta
         redirect controller:"Menu",action: "inicial2"
     }
     def saindo(){

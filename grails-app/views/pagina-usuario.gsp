@@ -14,16 +14,15 @@
     <g:if test="${session.usuario instanceof hotel.Gerente}">
         <g:render template="/layouts/dadosGerente"/>
     </g:if>
-    <g:if test="${session.usuario instanceof hotel.Cliente}">
     <section id="hotels" class="section-with-bg fadeInUp">
         <div class="section-header">
             <h2>QUARTOS</h2>
         </div>
         <g:render template="/layouts/quartosDisponveis"/>
+        <g:if test="${session.usuario instanceof hotel.Cliente}">
         <g:render template="/layouts/seusQuartos"/>
-        
-    </section>
     </g:if>
+    </section>
 </div>
 </main>
 </body>

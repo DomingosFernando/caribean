@@ -3,8 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sufee Admin - HTML5 Admin Template</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
+    <title>Avalie nosso hotel!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="apple-touch-icon" href="apple-icon.png">
@@ -29,7 +28,7 @@
             <div class="login-content">
                 <div class="login-logo">
                     <a href="index.html">
-                        <asset:image class="align-content" src="logo2.png"/>
+                        <asset:image class="align-content" src="Logo.png"/>
                     </a>
                 </div>
 

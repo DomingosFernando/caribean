@@ -95,15 +95,16 @@ hibernate:
 dataSource:
     pooled: true
     jmxExport: true
-    driverClassName: com.mysql.jdbc.Driver
-    username: root
-    password: ''
+
 
 environments:
     development:
         dataSource:
-            dbCreate: create
-            url:  jdbc:mysql://localhost:3306/hotel
+            driverClassName: org.h2.Driver
+                        username: sa
+                        password: ''
+                        dbCreate: create-drop
+                        url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
     test:
         dataSource:
             dbCreate: update
@@ -111,7 +112,10 @@ environments:
     production:
         dataSource:
             dbCreate: create
-            url:  jdbc:mysql://localhost:3306/hotel
+                        driverClassName: com.mysql.jdbc.Driver
+                        username:
+                        password:
+            url:  jdbc:mysql://enqhzd10cxh7hv2e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/q7icnjew7zs5ymxl
             properties:
                 jmxEnabled: true
                 initialSize: 5
